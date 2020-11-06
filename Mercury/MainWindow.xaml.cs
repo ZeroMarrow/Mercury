@@ -18,6 +18,7 @@ namespace Mercury
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
+    /// 3232324324222
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -33,8 +34,14 @@ namespace Mercury
                 string s = (r1.Text);
                 for (i = 0; i < s.Length / 2; ++i)
                 {
-                    if (s[i] != s[s.Length - 1 - i])
+                    if (s[i] == s[s.Length - 1 - i])
+                    {
                         R1.Text = "Палиндром";
+                    }
+                    else
+                    {
+                        R1.Text = "Не палиндром";
+                    }
                 }
             }
             catch (Exception ex)
